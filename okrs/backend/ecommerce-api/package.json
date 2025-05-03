@@ -1,0 +1,51 @@
+{
+  "name": "ecommerce-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "E-commerce API built with Express and Prisma",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonhvmp/ecommerce-api.git"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.7.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.3",
+    "@types/supertest": "^6.0.3",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

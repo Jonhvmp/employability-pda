@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PrismaClient } from '../generated/client';
+import { PrismaClient } from '@prisma/client';
 import { PrismaOrderRepository } from '../infrastructure/repositories/PrismaOrderRepository';
 import { PrismaProductRepository } from '../infrastructure/repositories/PrismaProductRepository';
 import { GetUserOrdersUseCase } from '../application/useCases/order/getUserOrdersUseCase';

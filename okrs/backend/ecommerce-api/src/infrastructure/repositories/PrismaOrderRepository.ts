@@ -1,4 +1,4 @@
-import { PrismaClient } from '../../generated/client';
+import { PrismaClient } from '@prisma/client';
 import { IOrderRepository } from '../../domain/interfaces/orderRepository';
 import { Order, OrderStatus } from '../../domain/entities/Order';
 import { OrderItem, OrderId } from '../../domain/entities/OrderItem';

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PrismaClient } from '../generated/client';
+import { PrismaClient } from '@prisma/client';
 import { LoginUseCase } from '../application/useCases/auth/loginUseCase';
 import { RegisterUseCase } from '../application/useCases/auth/registerUseCase';
 import { PrismaUserRepository } from '../infrastructure/repositories/PrismaUserRepository';

@@ -1,4 +1,4 @@
-import { PrismaClient } from '../../generated/client';
+import { PrismaClient } from '@prisma/client';
 import { IProductRepository } from '../../domain/interfaces/productRepository';
 import { Product, ProductId } from '../../domain/entities/Product';
 

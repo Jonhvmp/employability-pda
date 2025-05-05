@@ -8,7 +8,7 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/client"
+  // output   = "../src/generated/client"
 }
 
 model User {

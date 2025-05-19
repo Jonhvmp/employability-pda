@@ -12,12 +12,32 @@ module.exports = {
   },
   clearMocks: true,
   testPathIgnorePatterns: ['/node_modules/'],
-  testTimeout: 15000, // Aumentar o timeout para 15 segundos
-  detectOpenHandles: true,
+  // Configurações adicionais
   verbose: true,
-  setupFiles: ['dotenv/config'],
-  coverageReporters: ['lcov', 'text-summary'],
-  moduleNameMapper: {
-    '^@app/(.*)$': '<rootDir>/src/$1',
+  displayName: 'Ecommerce API',
+  bail: 5, // Para nos falhar rapidamente em caso de múltiplas falhas
+  testTimeout: 10000, // Timeout de 10 segundos para testes
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 70,
+      functions: 80,
+      lines: 80
+    }
   },
+  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
+  errorOnDeprecated: true,
+  maxWorkers: '50%', // Utiliza metade dos CPUs disponíveis
+  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'], // Arquivo para configurações globais de teste
+  watchPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', {
+      tsconfig: 'tsconfig.json',
+    }]
+  },
+  globals: {
+    'ts-jest': {
+      isolatedModules: true
+    }
+  }
 };
